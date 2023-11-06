@@ -1,0 +1,126 @@
+{% extends "web/partials/base.html" %}
+{% load static %}
+{% block content %}
+<!-- contact-form-area start -->
+<div id="contact" class="contact-form-area pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-7 col-lg-7">
+                <div class="area-title mb-40">
+                    <h2 class="mb-15">Get In Touch</h2>
+                </div>
+                <div class="contact-form mb-50 wow fadeInLeft" data-wow-delay=".3s">
+                    <form id="contact-form" action="https://www.wphix.com/template/tofa-preview/tofa/mail.php" method="POST">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input name="name" type="text" placeholder="Your Name :">
+                            </div>
+                            <div class="col-md-6">
+                                <input name="email" type="email" placeholder="Email :">
+                            </div>
+                            <div class="col-md-12">
+                                <input name="subject" type="email" placeholder="Subject :">
+                            </div>
+                            <div class="col-md-12">
+                                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message :"></textarea>
+                                <button class="btn" type="submit">Send Message</button>
+                            </div>
+                        </div>
+                    </form>
+                    <p class="ajax-response"></p>
+                </div>
+            </div>
+            <div class="col-xl-5 col-lg-5">
+                <div class="area-title mb-40">
+                    <h2 class="mb-15">Contact Info</h2>
+                    <p>Lorem ipsum dolor sit amet, consecte adipisicing elit sed do eiusmod tempor incididunt.</p>
+                </div>
+                <div class="contact-info mb-50 wow fadeInRight" data-wow-delay=".3s">
+                    <ul>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="ti-location-pin"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Location</h5>
+                                <span>Malappuram ,  kerala</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="ti-headphone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Call Me</h5>
+                                <span>+91 9656949008</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="ti-email"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h5>Email Us</h5>
+                                <span><a href="" ></a>asirm0658@gamil.com</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- contact-form-area end -->
+<!-- counter-area-start -->
+<div class="counter-area pt-150 pb-120" style="background-image:url({% static "web/img/bg/bg7.jpg" %})">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="counter-wrapper text-center mb-30 wow fadeInUp" data-wow-delay=".3s">
+                    <div class="counter-icon">
+                        <span class="icon icon-Starship"></span>
+                    </div>
+                    <div class="counter-text">
+                        <h1 class="counter">953</h1>
+                        <span>Win Awards</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="counter-wrapper text-center mb-30 wow fadeInUp" data-wow-delay=".6s">
+                    <div class="counter-icon">
+                        <span class="icon icon-Cup"></span>
+                    </div>
+                    <div class="counter-text">
+                        <h1 class="counter">1564</h1>
+                        <span>Project Complated</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="counter-wrapper text-center mb-30 wow fadeInUp" data-wow-delay=".9s">
+                    <div class="counter-icon">
+                        <span class="icon icon-Like"></span>
+                    </div>
+                    <div class="counter-text">
+                        <h1 class="counter">8362</h1>
+                        <span>Satisfied Clients</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                <div class="counter-wrapper text-center mb-30 wow fadeInUp" data-wow-delay="1.2s">
+                    <div class="counter-icon">
+                        <span class="icon icon-CompactCamera"></span>
+                    </div>
+                    <div class="counter-text">
+                        <h1 class="counter">265</h1>
+                        <span>Cuf Coffee</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- counter-area-end -->
+{% endblock content %}

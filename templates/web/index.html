@@ -1,9 +1,7 @@
-
-        <!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-
-        <!-- Add your site or application content here -->
+{% extends "web/partials/base.html" %}
+{% load static %}
+{% block content %}
+       
 
         <!-- preloader -->
         <div class="page-loader">
@@ -11,60 +9,10 @@
         </div>
         <!-- preloader -->
 
-        <!-- header start -->
-        <header id="sticky-header" class="header-area header-transparent pt-10 pb-10">
-            <div class="header-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="main-menu">
-                                <nav class="navbar navbar-expand-lg">
-                                    <a class="navbar-brand" href="index.html">
-                                        <h3>TOFA</h3>
-                                    </a>
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                        aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="navbar-icon"></span>
-                                        <span class="navbar-icon"></span>
-                                        <span class="navbar-icon"></span>
-                                    </button>
-
-                                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                        <ul class="navbar-nav ml-auto">
-                                            <li class="nav-item active">
-                                                <a class="nav-link" href="#home">Home </a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#about">About</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#service">Service</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#work">Work</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#team">Team</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#blog">Blog</a>
-                                            </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="#contact">Contact</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- header end -->
-
+        
+                                     
         <!-- slider start -->
-        <div id="home" class="slider-area hero pattern"  style="background-image: url(img/slider/slide2.jpg)">
+        <div id="home" class="slider-area hero pattern"  style="background-image: url({% static "web/img/slider/slide2.jpg" %})">
             <div class="home-arrow">
                 <a href="#about" class="smoth-scroll">
                     <i class="fa fa-angle-double-down"></i>
@@ -85,155 +33,157 @@
         <!-- slider end -->
 
         <!-- features-area start -->
-        <div id="about" class="features-area pt-120 pb-90">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="about-me mb-30">
-                            <img src="img/bg/me.png" alt="">
-                        </div>
+<div id="about" class="features-area pt-120 pb-90">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-5 col-lg-5">
+                <div class="about-me mb-30">
+                    <img src="{% static "web/img/bg/me.png" %}" alt="">
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7">
+                <div class="about-me-info mt-30 mb-30 pl-30">
+                    <span>Hello</span>
+                    <h2>I am Asir Muhammed <br> Web Developer and  Designder <br> From kerala, India.  </h2>
+                    <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a
+                    small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+                    <p>We have awesome team for your next project. </p>
+                    <div class="info-me mb-30">
+                        <h6><span>Mail</span>: <a href="https://www.wphix.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ffce0e7eae3fdeee1eecfe8e2eee6e3a1ece0e2">[email&#160;protected]</a></h6>
+                        <h6><span>Phone</span>: +91 9656949008</h6>
                     </div>
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="about-me-info mt-30 mb-30 pl-30">
-                            <span>Hello</span>
-                            <h2>I am mark jon, Frontend <br> Web Developer and  Designder <br> From Panjab, India.  </h2>
-                            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a
-                            small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
-                            <p>We have awesome team for your next project. </p>
-                            <div class="info-me mb-30">
-                                <h6><span>Mail</span>: <a href="https://www.wphix.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="8ffce0e7eae3fdeee1eecfe8e2eee6e3a1ece0e2">[email&#160;protected]</a></h6>
-                                <h6><span>Phone</span>: +123456789</h6>
-                            </div>
-                            <a href="#contact" class="btn smoth-scroll">Hire Me</a>
-                        </div>
-                    </div>
+                    <a href="{% url "web:contact" %}" class="btn smoth-scroll">Hire Me</a>
                 </div>
             </div>
         </div>
-        <!-- features-area end -->
-        <!-- RESUME -->
-        <div id="resume" class="resume-area gray-bg pt-115 pb-70">
-            <div class="container">
-                <div class="row">
-                    <!-- RESUME COLUMN -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="profile wow fadeInUp" data-wow-delay=".3s">
-                            <div class="profile-icon">
-                                <span class="icon icon-Cup"></span>
-                            </div>
-                            <h3 class="profile-title">Awards</h3>
-                            <hr class="divider divider-gross m-b-30">
-
-                            <div class="profile-content">
-                                <h6>Best Plugin Developer</h6>
-                                <p>Winner</p>
-                            </div>
-                            <div class="profile-content">
-                                <h6>Best Front-End Developers</h6>
-                                <p>Top Front-End Developer</p>
-                            </div>
-                            <div class="profile-content">
-                                <h6>Design Conference</h6>
-                                <p>Best UI/UX Designer</p>
-                            </div>
-                        </div>
+    </div>
+</div>
+<!-- features-area end -->
+<!-- RESUME -->
+<div id="resume" class="resume-area gray-bg pt-115 pb-70">
+    <div class="container">
+        <div class="row">
+            <!-- RESUME COLUMN -->
+            <div class="col-md-6 col-lg-3">
+                <div class="profile wow fadeInUp" data-wow-delay=".3s">
+                    <div class="profile-icon">
+                        <span class="icon icon-Cup"></span>
                     </div>
-                    <!-- /RESUME COLUMN -->
+                    <h3 class="profile-title">Awards</h3>
+                    <hr class="divider divider-gross m-b-30">
 
-                    <!-- RESUME COLUMN -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="profile wow fadeInUp" data-wow-delay=".5s">
-                            <div class="profile-icon">
-                                <span class="icon icon-CompassTool"></span>
-                            </div>
-                            <h3 class="profile-title">Education</h3>
-                            <hr class="divider divider-gross m-b-30">
-
-                            <div class="profile-content">
-                                <h6>University of Peoples</h6>
-                                <p>Bachelor of Science</p>
-                            </div>
-                            <div class="profile-content">
-                                <h6>College of Ahsanullah</h6>
-                                <p>Master of Fine Arts</p>
-                            </div>
-                            <div class="profile-content">
-                                <h6>School of Hafiz Uddin</h6>
-                                <p>Bachelor of Design</p>
-                            </div>
-                        </div>
+                    <div class="profile-content">
+                        <h6>Best Plugin Developer</h6>
+                        <p>Winner</p>
                     </div>
-                    <!-- /RESUME COLUMN -->
-
-                    <!-- RESUME COLUMN -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="profile wow fadeInUp" data-wow-delay=".7s">
-                            <div class="profile-icon">
-                                <span class="icon icon-Tie"></span>
-                            </div>
-                            <h3 class="profile-title">Experience</h3>
-                            <hr class="divider divider-gross m-b-30">
-
-                            <div class="profile-content">
-                                <h6>Front-End Developer</h6>
-                                <p>Themeforest Marketplace</p>
-                            </div>
-                            <div class="profile-content">
-                                <h6>Lead Developer</h6>
-                                <p>Creative Art company</p>
-                            </div>
-                            <div class="profile-content">
-                                <h6>UI/UX Engineer</h6>
-                                <p>Design Studio</p>
-                            </div>
-                        </div>
+                    <div class="profile-content">
+                        <h6>Best Front-End Developers</h6>
+                        <p>Top Front-End Developer</p>
                     </div>
-                    <!-- /RESUME COLUMN -->
-
-                    <!-- RESUME COLUMN -->
-                    <div class="col-md-6 col-lg-3">
-                        <div class="profile wow fadeInUp" data-wow-delay=".9s">
-                            <div class="profile-icon">
-                                <span class="icon icon-Medal"></span>
-                            </div>
-                            <h3 class="profile-title">My Skills</h3>
-                            <hr class="divider divider-gross m-b-30">
-
-                            <h6 class="progress-title">HTML</h6>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span>95%</span>
-                                </div>
-                            </div>
-
-                            <h6 class="progress-title">CSS</h6>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span>85%</span>
-                                </div>
-                            </div>
-
-                            <h6 class="progress-title">PHP</h6>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span>75%</span>
-                                </div>
-                            </div>
-
-                            <h6 class="progress-title">WordPress</h6>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <span>80%</span>
-                                </div>
-                            </div>
-
-                        </div>
+                    <div class="profile-content">
+                        <h6>Design Conference</h6>
+                        <p>Best UI/UX Designer</p>
                     </div>
-                    <!-- /RESUME COLUMN -->
                 </div>
             </div>
+            <!-- /RESUME COLUMN -->
+
+            <!-- RESUME COLUMN -->
+            <div class="col-md-6 col-lg-3">
+                <div class="profile wow fadeInUp" data-wow-delay=".5s">
+                    <div class="profile-icon">
+                        <span class="icon icon-CompassTool"></span>
+                    </div>
+                    <h3 class="profile-title">Education</h3>
+                    <hr class="divider divider-gross m-b-30">
+
+                    <div class="profile-content">
+                        <h6>University of Peoples</h6>
+                        <p>Bachelor of Science</p>
+                    </div>
+                    <div class="profile-content">
+                        <h6>College of Ahsanullah</h6>
+                        <p>Master of Fine Arts</p>
+                    </div>
+                    <div class="profile-content">
+                        <h6>School of Hafiz Uddin</h6>
+                        <p>Bachelor of Design</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /RESUME COLUMN -->
+
+            <!-- RESUME COLUMN -->
+            <div class="col-md-6 col-lg-3">
+                <div class="profile wow fadeInUp" data-wow-delay=".7s">
+                    <div class="profile-icon">
+                        <span class="icon icon-Tie"></span>
+                    </div>
+                    <h3 class="profile-title">Experience</h3>
+                    <hr class="divider divider-gross m-b-30">
+
+                    <div class="profile-content">
+                        <h6>Front-End Developer</h6>
+                        <p>Themeforest Marketplace</p>
+                    </div>
+                    <div class="profile-content">
+                        <h6>Lead Developer</h6>
+                        <p>Creative Art company</p>
+                    </div>
+                    <div class="profile-content">
+                        <h6>UI/UX Engineer</h6>
+                        <p>Design Studio</p>
+                    </div>
+                </div>
+            </div>
+            <!-- /RESUME COLUMN -->
+
+            <!-- RESUME COLUMN -->
+            <div class="col-md-6 col-lg-3">
+                <div class="profile wow fadeInUp" data-wow-delay=".9s">
+                    <div class="profile-icon">
+                        <span class="icon icon-Medal"></span>
+                    </div>
+                    <h3 class="profile-title">My Skills</h3>
+                    <hr class="divider divider-gross m-b-30">
+
+                    <h6 class="progress-title">HTML</h6>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <span>95%</span>
+                        </div>
+                    </div>
+
+                    <h6 class="progress-title">CSS</h6>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <span>85%</span>
+                        </div>
+                    </div>
+
+                    <h6 class="progress-title">PHP</h6>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <span>75%</span>
+                        </div>
+                    </div>
+
+                    <h6 class="progress-title">WordPress</h6>
+                    <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <span>80%</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /RESUME COLUMN -->
         </div>
-        <!-- /RESUME -->
+    </div>
+</div>
+<!-- /RESUME -->
+
+        
         <!-- basic-service-area start -->
         <div id="service" class="basic-service-area pt-115 pb-70">
             <div class="container">
@@ -323,7 +273,7 @@
         </div>
         <!-- basic-service-area end -->
         <!-- counter-area-start -->
-        <div class="counter-area pt-150 pb-120" style="background-image:url(img/bg/bg7.jpg)">
+        <div class="counter-area pt-150 pb-120" style="background-image:url({% static "web/img/bg/bg7.jpg" %})">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
@@ -400,7 +350,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat2 cat4">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay=".3s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port6.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port6.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -414,7 +364,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port6.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port6.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Creative Photography</h2>
@@ -446,7 +396,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat1 cat4">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay=".5s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port5.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port5.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -460,7 +410,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port5.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port5.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Redesign Work</h2>
@@ -492,7 +442,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat3 cat4">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay=".7s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port7.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port7.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -506,7 +456,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port7.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port7.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Beautifully Designed</h2>
@@ -538,7 +488,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat1 cat2">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay=".9s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port8.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port8.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -552,7 +502,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port8.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port8.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Creative Shop Work</h2>
@@ -584,7 +534,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat3 cat4">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay="1.1s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port1.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port1.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -598,7 +548,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port1.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port1.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Neleman Cava</h2>
@@ -629,7 +579,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat1 cat4">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay="1.3s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port3.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port3.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -643,7 +593,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port3.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port3.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Jeff Burger</h2>
@@ -674,7 +624,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat2 cat1">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay="1.5s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port4.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port4.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -688,7 +638,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port4.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port4.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Delirio Tropical</h2>
@@ -720,7 +670,7 @@
                     <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat2 cat3">
                         <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay="1.7s">
                             <div class="portfolio-thumb">
-                                <img src="img/portfolio/port2.jpg" alt="">
+                                <img src="{% static "web/img/portfolio/port2.jpg" %}" alt="">
                             </div>
                             <div class="portfolio-content">
                                 <h3>
@@ -734,7 +684,7 @@
                             <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                     <div class="view-project">
-                                        <div class="project-media" style="background-image:url(img/portfolio/port2.jpg)"></div>
+                                        <div class="project-media" style="background-image:url({% static "web/img/portfolio/port2.jpg" %})"></div>
                                         <div class="view-project-content pt-10">
                                             <div class="modal-title">
                                                 <h2>Sweet Lane</h2>
@@ -781,7 +731,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="team-box mb-30 wow fadeInUp" data-wow-delay=".3s">
                             <div class="team-img">
-                                <img src="img/team/team-01.jpg" alt="">
+                                <img src="{% static "web/img/team/team-01.jpg" %}" alt="">
                             </div>
                             <div class="team-content">
                                 <div class="team-table">
@@ -800,7 +750,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="team-box mb-30 wow fadeInUp" data-wow-delay=".6s">
                             <div class="team-img">
-                                <img src="img/team/team-02.jpg" alt="">
+                                <img src="{% static "web/img/team/team-02.jpg" %}" alt="">
                             </div>
                             <div class="team-content">
                                 <div class="team-table">
@@ -819,7 +769,7 @@
                     <div class="col-xl-4 col-lg-4 col-md-4">
                         <div class="team-box mb-30 wow fadeInUp" data-wow-delay=".9s">
                             <div class="team-img">
-                                <img src="img/team/team-03.jpg" alt="">
+                                <img src="{% static "web/img/team/team-03.jpg" %}" alt="">
                             </div>
                             <div class="team-content">
                                 <div class="team-table">
@@ -915,16 +865,16 @@
                         </div>
                         <div class="testimonial-nav">
                             <div class="testimonial-thumb">
-                                <img src="img/testimonial/img3.png" alt="">
+                                <img src="{% static "web/img/testimonial/img3.png" %}" alt="">
                             </div>
                             <div class="testimonial-thumb">
-                                <img src="img/testimonial/img1.png" alt="">
+                                <img src="{% static "web/img/testimonial/img1.png" %}" alt="">
                             </div>
                             <div class="testimonial-thumb">
-                                <img src="img/testimonial/img1.png" alt="">
+                                <img src="{% static "web/img/testimonial/img1.png" %}" alt="">
                             </div>
                             <div class="testimonial-thumb">
-                                <img src="img/testimonial/img2.png" alt="">
+                                <img src="{% static "web/img/testimonial/img2.png" %}" alt="">
                             </div>
                         </div>
                     </div>
@@ -948,7 +898,7 @@
                         <div class="blog-wrapper blog-column">
                             <div class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="img/blog/1.jpg" alt="" />
+                                    <img src="{% static "web/img/blog/1.jpg" %}" alt="" />
                                 </a>
                             </div>
                             <div class="blog-content">
@@ -972,7 +922,7 @@
                         <div class="blog-wrapper blog-column">
                             <div class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="img/blog/2.jpg" alt="" />
+                                    <img src="{% static "web/img/blog/2.jpg" %}" alt="" />
                                 </a>
                             </div>
                             <div class="blog-content">
@@ -996,7 +946,7 @@
                         <div class="blog-wrapper blog-column">
                             <div class="blog-thumb">
                                 <a href="blog-details.html">
-                                    <img src="img/blog/3.jpg" alt="" />
+                                    <img src="{% static "web/img/blog/3.jpg" %}" alt="" />
                                 </a>
                             </div>
                             <div class="blog-content">
@@ -1021,101 +971,10 @@
         </div>
         <!-- basic-blog-area end -->
 
-        <!-- contact-form-area start -->
-        <div id="contact" class="contact-form-area pt-115 pb-70">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7 col-lg-7">
-                        <div class="area-title mb-40">
-                            <h2 class="mb-15">Get In Touch</h2>
-                        </div>
-                        <div class="contact-form mb-50 wow fadeInLeft" data-wow-delay=".3s">
-                            <form id="contact-form" action="https://www.wphix.com/template/tofa-preview/tofa/mail.php" method="POST">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <input name="name" type="text" placeholder="Your Name :">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <input name="email" type="email" placeholder="Email :">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <input name="subject" type="email" placeholder="Subject :">
-                                    </div>
-                                    <div class="col-md-12">
-                                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message :"></textarea>
-                                        <button class="btn" type="submit">Send Message</button>
-                                    </div>
-                                </div>
-                            </form>
-                            <p class="ajax-response"></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-5 col-lg-5">
-                        <div class="area-title mb-40">
-                            <h2 class="mb-15">Contact Info</h2>
-                            <p>Lorem ipsum dolor sit amet, consecte adipisicing elit sed do eiusmod tempor incididunt.</p>
-                        </div>
-                        <div class="contact-info mb-50 wow fadeInRight" data-wow-delay=".3s">
-                            <ul>
-                                <li>
-                                    <div class="contact-icon">
-                                        <i class="ti-location-pin"></i>
-                                    </div>
-                                    <div class="contact-text">
-                                        <h5>Location</h5>
-                                        <span>123 Business Avenue, Hoston, USA</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="contact-icon">
-                                        <i class="ti-headphone"></i>
-                                    </div>
-                                    <div class="contact-text">
-                                        <h5>Call Us</h5>
-                                        <span>+0123456789</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="contact-icon">
-                                        <i class="ti-email"></i>
-                                    </div>
-                                    <div class="contact-text">
-                                        <h5>Email Us</h5>
-                                        <span><a href="https://www.wphix.com/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="97e4e2e7e7f8e5e3d7f0faf6fefbb9f4f8fa">[email&#160;protected]</a></span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- contact-form-area end -->
+        
 
-        <!-- footer start -->
-        <footer>
-            <div class="footer-area black-bg pt-90 pb-90">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="footer-text text-center wow fadeInUp" data-wow-delay=".3s">
-                                <div class="footer-icon mb-20">
-                                    <a href="#"><i class="ti-facebook"></i></a>
-                                    <a href="#"><i class="ti-twitter-alt"></i></a>
-                                    <a href="#"><i class="ti-dribbble"></i></a>
-                                    <a href="#"><i class="ti-google"></i></a>
-                                    <a href="#"><i class="ti-pinterest"></i></a>
-                                    <a href="#"><i class="ti-instagram"></i></a>
-                                </div>
-                                <p>Copyright- 2018 BasicTheme, All Right Reserved</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <!-- footer end -->
-
+        
+{% endblock content %}
 
 
 
