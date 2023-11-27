@@ -4,10 +4,13 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from .forms import ContactForm
 import json
+from .models import Portfolio
 
 # Create your views here.
 def index(request):
-    context = {"is_index": True}
+    context = {"is_index": True,
+               'portfolios':Portfolio.objects.all(),
+               }
     return render(request, "web/index.html", context)
 
 def about(request):
@@ -43,7 +46,9 @@ def contact(request):
 
 
 def portfolio(request):
-    context = {"is_portfolio": True}
+    context = {"is_portfolio": True,
+               'portfolios':Portfolio.objects.all(),
+               }
     return render(request, "web/portfolio.html", context)
 
 def update(request):
