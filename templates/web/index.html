@@ -320,7 +320,7 @@
             </div>
         </div>
         <!-- counter-area-end -->
-        <!-- portfolio-area start -->
+       <!-- portfolio-area start -->
 <div id="work" class="portfolio-area pt-115">
     <div class="container-fluid">
         <div class="row">
@@ -341,41 +341,12 @@
                     </div>
                     <div class="portfolio-content">
                         <h3>
-                            <a href="#" data-toggle="modal" data-target="#popup-modal6">{{portfolio.title}}</a>
+                            <a href="{{portfolio.link}}" >{{portfolio.title}}</a>
                         </h3>
                         <span>website</span>
                     </div>
                 </div>
-                <!-- Modal content start -->
-                <div class="modal fade" id="popup-modal6" tabindex="-1" role="dialog" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="view-project">
-                                <div class="project-media" style="background-image:url({{portfolio.image.url}})"></div>
-                                <div class="view-project-content pt-10">
-                                    <div class="modal-title">
-                                        <h2>{{portfolio.title}}</h2>
-
-                                    </div>
-                                    <p>{{portfolio.description}}</p>
-                                    <ul class="project-info-list">
-                                        <li class="text-uppercase">
-                                            <span>Client</span>{{portfolio.client}}</li>
-                                        <li class="text-uppercase">
-                                            <span>Industry</span>{{portfolio.industry}}</li>
-                                        <li class="text-uppercase">
-                                            <span>Services</span>{{portfolio.service}}</li>
-                                        <li class="text-uppercase">
-                                            <span>Website</span>
-                                            <a href="#">{{portfolio.link}}</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal content end -->
+                
             </div>
             {% comment %} <div class="col-xl-3 col-lg-4 col-md-6 grid-item cat1 cat4">
                 <div class="portfolio-wrapper mb-30 wow fadeIn" data-wow-delay=".5s">
